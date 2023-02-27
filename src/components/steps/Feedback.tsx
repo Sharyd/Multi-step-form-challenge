@@ -4,7 +4,7 @@ import Heading from '../ui/Heading'
 const Feedback = () => {
     return (
         <div className="flex-1 gap-6 h-full flex flex-col items-center justify-center responsiveSection">
-            <img src="/public/images/icon-thank-you.svg" alt="" />
+            <img src="/images/icon-thank-you.svg" alt="" />
             <div className="flex flex-col items-center gap-3">
                 <Heading>Thank you</Heading>
                 <p className="w-[350px] md:w-[450px] text-center text-coolGray">
