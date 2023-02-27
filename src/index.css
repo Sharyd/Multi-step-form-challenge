@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    background-color: hsl(217, 100%, 97%);
+}
+
+button {
+    letter-spacing: 1.08px;
+}
+
+@layer components {
+    .responsiveSection {
+        @apply z-10 bg-white py-8 px-6 -top-4 md:top-4 md:h-full absolute md:relative w-[375px] rounded-lg items-start shadow-lg md:shadow-none;
+    }
+    .responsiveButton {
+        @apply absolute -bottom-[35%] py-10 md:py-0 right-0 md:static md:bottom-0;
+    }
+}
