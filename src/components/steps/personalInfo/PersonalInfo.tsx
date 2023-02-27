@@ -92,6 +92,7 @@ const PersonalInfo = ({ onSubmitPersonal, personal, setPersonal }: Props) => {
                     )}
                 </div>
                 <input
+                    id="name"
                     onChange={(e) =>
                         setPersonal((prev) => ({
                             ...prev,
@@ -120,6 +121,7 @@ const PersonalInfo = ({ onSubmitPersonal, personal, setPersonal }: Props) => {
                     )}
                 </div>
                 <input
+                    id="email"
                     onChange={(e) =>
                         setPersonal((prev) => ({
                             ...prev,
@@ -150,6 +152,7 @@ const PersonalInfo = ({ onSubmitPersonal, personal, setPersonal }: Props) => {
                     )}
                 </div>
                 <input
+                    id="phone"
                     onChange={(e) =>
                         setPersonal((prev) => ({
                             ...prev,
