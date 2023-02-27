@@ -73,7 +73,7 @@ function App() {
     }
 
     return (
-        <div className="bg-magnolia w-full  h-screen flex items-center justify-center">
+        <div className="bg-magnolia w-full p-4  h-screen flex items-center justify-center">
             <Wrapper>
                 <Sidebar
                     active={currentStepIndex}
