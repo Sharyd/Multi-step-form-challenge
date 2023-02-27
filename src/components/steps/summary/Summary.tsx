@@ -53,7 +53,8 @@ const Summary = ({
                 <div className="relative flex justify-between mb-6 w-full  ">
                     <div>
                         <p className="capitalize text-marineBlue font-bold ">
-                            {selectPlan?.name} ({selectPlan?.type})
+                            {selectPlan?.name} (
+                            {toggleCheckBox ? 'yearly' : 'monthly'})
                         </p>
                         <button
                             type="button"
