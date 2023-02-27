@@ -10,7 +10,7 @@ const Sidebar = ({ dataSteps, active }: Props) => {
         <div className="flex-row justify-center md:justify-start p-6 rounded-xl uppercase flex md:flex-col w-[550px] sm:w-[600px] md:w-[300px] items-start">
             <img
                 className="absolute w-full md:w-max bottom-[17.8rem] right-0 p-4  md:top-0 md:left-0"
-                src="../../../public/images/bg-sidebar-desktop.svg"
+                src="/images/bg-sidebar-desktop.svg"
                 alt=""
             />
             <div className="md:hidden absolute w-full h-48 bottom-[15rem] right-0 bg-magnolia z-0"></div>
