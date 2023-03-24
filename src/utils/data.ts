@@ -5,6 +5,11 @@ export const dataSidebarSteps = [
     'summary',
 ]
 
+export interface ValidType {
+    errorText: string
+    isValid: boolean | null
+}
+
 export interface AddonsType {
     title: string
     desc: string

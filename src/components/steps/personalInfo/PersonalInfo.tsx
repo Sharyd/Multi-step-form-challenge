@@ -5,8 +5,12 @@ import React, {
     useEffect,
     useState,
 } from 'react'
-import { validateEmail, validatePhoneNumber } from '../../../helpers/validation'
-import { personalDataType } from '../../../utils/data'
+import {
+    validateEmail,
+    validateName,
+    validatePhoneNumber,
+} from '../../../helpers/validation'
+import { personalDataType, ValidType } from '../../../utils/data'
 import Button from '../../ui/Button'
 import Heading from '../../ui/Heading'
 
@@ -14,10 +18,6 @@ interface Props {
     onSubmitPersonal: (e: FormEvent<Element>) => void
     setPersonal: Dispatch<React.SetStateAction<personalDataType>>
     personal: personalDataType
-}
-interface ValidType {
-    errorText: string
-    isValid: boolean | null
 }
 
 const PersonalInfo = ({ onSubmitPersonal, personal, setPersonal }: Props) => {
@@ -35,7 +35,7 @@ const PersonalInfo = ({ onSubmitPersonal, personal, setPersonal }: Props) => {
     })
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
-        if (personal.name === '') {
+        if (validateName(personal.name)) {
             return setNameValid({
                 errorText: 'A field has been missed',
                 isValid: false,
@@ -63,6 +63,11 @@ const PersonalInfo = ({ onSubmitPersonal, personal, setPersonal }: Props) => {
             return setPhoneValid({
                 errorText: 'Please enter correct phone number',
                 isValid: false,
+            })
+        } else {
+            setPhoneValid({
+                errorText: '',
+                isValid: true,
             })
         }
 
